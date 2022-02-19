@@ -8,8 +8,8 @@ public class Task8 {
         System.out.println("rangeFrom: " + rangeFrom);
         System.out.println("rangeTo: " + rangeTo);
 
-        while( rangeFrom <= rangeTo) {
-            if(rangeFrom % 2 == 0) {
+        while (rangeFrom <= rangeTo) {
+            if (rangeFrom % 2 == 0) {
                 System.out.println(rangeFrom);
             }
             rangeFrom++;

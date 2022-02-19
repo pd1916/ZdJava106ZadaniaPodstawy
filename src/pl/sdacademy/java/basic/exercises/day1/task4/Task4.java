@@ -20,7 +20,7 @@ public class Task4 {
         int height = 0;
         try {
             height = scanner.nextInt();
-        } catch(InputMismatchException ex) {
+        } catch (InputMismatchException ex) {
             System.out.println("Please insert only integer digits!");
             System.exit(1);
         }
@@ -32,7 +32,7 @@ public class Task4 {
         float weight = 0;
         try {
             weight = scanner.nextFloat();
-        } catch(InputMismatchException ex) {
+        } catch (InputMismatchException ex) {
             System.out.println("Please insert only digits!");
             System.exit(1);
         }
@@ -46,7 +46,7 @@ public class Task4 {
     }
 
     private static void displayBmiResult(float bmi) {
-        if(bmi < BMI_MIN_RANGE || bmi > BMI_MAX_RANGE) {
+        if (bmi < BMI_MIN_RANGE || bmi > BMI_MAX_RANGE) {
             System.out.println("BMI is incorrect: " + bmi);
         } else {
             System.out.println("BMI is correct: " + bmi);

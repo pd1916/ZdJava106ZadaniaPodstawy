@@ -12,7 +12,7 @@ public class Task6 {
 //            System.out.println(multiplier + " * " + minMultiplicand + " = " + result);
 //        }
 
-        while(minMultiplicand <= maxMultiplicand) {
+        while (minMultiplicand <= maxMultiplicand) {
             int result = multiplier * minMultiplicand;
             System.out.println(multiplier + " * " + minMultiplicand + " = " + result);
             minMultiplicand++;

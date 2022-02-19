@@ -18,7 +18,7 @@ public class Task5 {
     }
 
     private static int sumOfSequence(int firstDigit, int secondDigit) {
-        if(firstDigit > secondDigit) {
+        if (firstDigit > secondDigit) {
             //return -1;
             // zamiana miejscami
             int tmp = firstDigit;
@@ -33,7 +33,7 @@ public class Task5 {
         do {
             sum += firstDigit; // sum = sum + firstDigit
             firstDigit++;
-        } while(firstDigit <= secondDigit);
+        } while (firstDigit <= secondDigit);
         return sum;
     }
 
