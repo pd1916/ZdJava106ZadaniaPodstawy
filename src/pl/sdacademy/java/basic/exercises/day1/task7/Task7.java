@@ -6,36 +6,51 @@ public class Task7 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         String decision;
         do {
-            System.out.println("Calculating...");
-            // poibieramy dwie liczby i operator od usera
-            //fun()
-            
+            System.out.print("Please insert first digit: ");
+            float firstDigit = scanner.nextFloat();
+            scanner.nextLine();
+
+            System.out.print("Please insert operator (+ - / *): ");
+            String operator = scanner.nextLine();
+            System.out.print("Please insert second digit: ");
+            float secondDigit = scanner.nextFloat();
+            scanner.nextLine();
+
+            float result = calculate(firstDigit, secondDigit, operator);
+            System.out.println("Result: " + firstDigit + operator + secondDigit + " = " + result);
             // pytamy usera czy chce kontynuować
             // pobieramy odpowiedz od usera
-            System.out.print("New calculation or 'Stop' ");
+            System.out.print("New calculation or Stop? ");
             decision = scanner.nextLine();
-        } while(!("Stop".equalsIgnoreCase(decision)));
+        } while (!"Stop".equalsIgnoreCase(decision));
     }
 
-    private static void fun(float firstDigit, float secondDigit, String operator) {
+    private static float calculate(float a, float b, String operator) {
+        float result = 0;
         switch (operator) {
             case "+":
-                // logika
+                result = a + b;
                 break;
             case "-":
-                // logika
+                result = a - b;
                 break;
             case "*":
-                // logika
+                result = a * b;
                 break;
             case "/":
-                // logika
+                // lepsze: użycie bloku try-catch
+                if (b == 0) {
+                    System.out.println("Wrong operation");
+                    System.exit(1);
+                }
+                result = a / b;
                 break;
             default:
-                System.out.println("Wrong Operator");
+                System.out.println("Operator not exist");
+                System.exit(1);
         }
+        return result;
     }
 }

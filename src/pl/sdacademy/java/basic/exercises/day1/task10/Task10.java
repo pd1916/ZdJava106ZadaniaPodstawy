@@ -14,7 +14,7 @@ public class Task10 {
 
     private static int sumOfDigits(int number) {
         int sum = 0;
-        if(number > 9) {
+        if (number > 9) {
             //123
             while (number != 0) { // number = 123, number = 12
                 sum += number % 10; // sum = 0 + 3 , number % 10 => 123 % 10 = 3
