@@ -15,7 +15,7 @@ public class Task11 {
     }
 
     private static boolean ifPalindrome(String input) {
-        if(input != null) {
+        if (input != null) {
             String afterReverse = new StringBuilder(input).reverse().toString();
             return input.equals(afterReverse);
         }

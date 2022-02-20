@@ -8,7 +8,7 @@ public class Task5 {
 
     // by Marek
     public static int timesContained(String input, char character) {
-        if( input != null && !input.isBlank()) {
+        if (input != null && !input.isBlank()) {
             int timesContained = 0;
             //Ala ma kota
             for (int i = 0; i < input.length(); i++) {

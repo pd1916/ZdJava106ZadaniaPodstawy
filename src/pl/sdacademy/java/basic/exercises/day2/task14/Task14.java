@@ -8,7 +8,7 @@ public class Task14 {
         int[] inputs = {12, -7, 19, -5, -9};
         System.out.println("Inputs: " + Arrays.toString(inputs));
         int lengthOfNewArray = countNegativeValuesInArray(inputs);
-        if(lengthOfNewArray > 0) {
+        if (lengthOfNewArray > 0) {
             int[] newArray = createNewArray(inputs, lengthOfNewArray);
             System.out.println("Result: " + Arrays.toString(newArray));
         }
@@ -16,8 +16,8 @@ public class Task14 {
 
     private static int countNegativeValuesInArray(int[] inputs) {
         int counter = 0;
-        for(int element : inputs) {
-            if(element < 0) {
+        for (int element : inputs) {
+            if (element < 0) {
                 counter++;
             }
         }
@@ -38,8 +38,8 @@ public class Task14 {
 //            }
 //        }
         int i = 0;
-        for(int element : inputs) {
-            if(element < 0) {
+        for (int element : inputs) {
+            if (element < 0) {
                 newArray[i++] = element;
             }
         }

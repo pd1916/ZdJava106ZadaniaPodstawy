@@ -1,4 +1,4 @@
-package pl.sdacademy.java.basic.exercises.day2.Task2;
+package pl.sdacademy.java.basic.exercises.day2.task2;
 
 public class Task2 {
 
@@ -16,7 +16,7 @@ public class Task2 {
     private static boolean isWordStartsWithPrefix(String input, String prefix) {
         // logika ? akcja gdy true : akcja gdy false
         //String tmp = input != null ? "ok" : "error";
-        return input != null ? input.startsWith(prefix) : false;
+        return input != null && input.startsWith(prefix);
 //        if(input != null) {
 //            return ;
 //        }
@@ -24,6 +24,6 @@ public class Task2 {
     }
 
     private static boolean isWordEndWithSuffix(String input, String suffix) {
-        return input != null ? input.endsWith(suffix) : false;
+        return input != null && input.endsWith(suffix);
     }
 }

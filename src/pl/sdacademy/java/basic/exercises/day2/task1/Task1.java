@@ -1,4 +1,4 @@
-package pl.sdacademy.java.basic.exercises.day2.Task1;
+package pl.sdacademy.java.basic.exercises.day2.task1;
 
 public class Task1 {
     public static void main(String[] args) {

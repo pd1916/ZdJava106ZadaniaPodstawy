@@ -26,9 +26,9 @@ public class Task13 {
 //                minValue = inputs[i];
 //            }
 //        }
-        for(int i : inputs) {
-            if(i < minValue) {
-               minValue = i;
+        for (int i : inputs) {
+            if (i < minValue) {
+                minValue = i;
             }
         }
         return minValue;
@@ -36,8 +36,8 @@ public class Task13 {
 
     private static int getMaxValue(int[] inputs) {
         int maxValue = inputs[0];
-        for(int i : inputs) {
-            if(i > maxValue) {
+        for (int i : inputs) {
+            if (i > maxValue) {
                 maxValue = i;
             }
         }
@@ -46,7 +46,7 @@ public class Task13 {
 
     private static int sum(int[] inputs) {
         int sum = 0;
-        for(int element : inputs){
+        for (int element : inputs) {
             sum += element;
         }
         return sum;

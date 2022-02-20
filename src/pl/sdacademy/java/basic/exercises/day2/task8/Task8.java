@@ -16,13 +16,13 @@ public class Task8 {
     private static String replaceChars(String input) {
         //String result = "";
         StringBuilder result = new StringBuilder();
-        for(int i = 0; i < input.length(); i++) {
+        for (int i = 0; i < input.length(); i++) {
             char currentChar = input.charAt(i);
-            if(currentChar >= VALUE_UPPER_A_IN_ASCII && currentChar <= VALUE_UPPER_Z_IN_ASCII) {
-                result.append((char)(currentChar + DIFF_UPPER_AND_LOWER_IN_ASCII));
+            if (currentChar >= VALUE_UPPER_A_IN_ASCII && currentChar <= VALUE_UPPER_Z_IN_ASCII) {
+                result.append((char) (currentChar + DIFF_UPPER_AND_LOWER_IN_ASCII));
                 //result += (char)(currentChar + DIFF_UPPER_AND_LOWER);
-            } else if(currentChar >= VALUE_LOWER_A_IN_ASCII && currentChar <= VALUE_LOWER_Z_IN_ASCII) {
-                result.append((char)(currentChar - DIFF_UPPER_AND_LOWER_IN_ASCII));
+            } else if (currentChar >= VALUE_LOWER_A_IN_ASCII && currentChar <= VALUE_LOWER_Z_IN_ASCII) {
+                result.append((char) (currentChar - DIFF_UPPER_AND_LOWER_IN_ASCII));
                 //result += (char)(currentChar - DIFF_UPPER_AND_LOWER);
             } else {
                 result.append((currentChar));
@@ -36,7 +36,7 @@ public class Task8 {
     private static String changeSize(String text) {
         String newText = "";
         for (int i = 0; i < text.length(); i++) {
-            if (text.charAt(i) == text.toUpperCase().charAt(i)){
+            if (text.charAt(i) == text.toUpperCase().charAt(i)) {
                 newText += text.toLowerCase().charAt(i);
             } else {
                 newText += text.toUpperCase().charAt(i);

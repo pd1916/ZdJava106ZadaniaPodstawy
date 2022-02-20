@@ -9,7 +9,7 @@ public class Task4 {
     }
 
     private static String replace(String input) {
-        if(input != null) {
+        if (input != null) {
 //            return input
 //                    .replace(".", "-STOP-")
 //                    .replace(",", "-STOP-");

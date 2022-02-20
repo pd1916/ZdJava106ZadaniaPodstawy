@@ -8,18 +8,18 @@ public class Task6 {
     }
 
     //by Przemek, Andrzej
-    private static int indexOfChar (String sentence, char character) {
-        if(sentence != null && !sentence.isBlank()) {
+    private static int indexOfChar(String sentence, char character) {
+        if (sentence != null && !sentence.isBlank()) {
             int foundIndex = sentence.indexOf(character);
             return foundIndex;
         }
         return -1;
     }
 
-    private static int indexOfChar2 (String sentence, char character) {
-        if(sentence != null && !sentence.isBlank()) {
-            for(int i = 0; i < sentence.length(); i++) {
-                if(sentence.charAt(i) == character) {
+    private static int indexOfChar2(String sentence, char character) {
+        if (sentence != null && !sentence.isBlank()) {
+            for (int i = 0; i < sentence.length(); i++) {
+                if (sentence.charAt(i) == character) {
                     return i;
                 }
             }

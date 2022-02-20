@@ -20,7 +20,7 @@ public class Task3 {
 
     private static int getIndex(String input, String word) {
         //if(input != null && word != null && !input.isBlank() && !word.isBlank()) {
-        if(isValid(input) && isValid(word)) {
+        if (isValid(input) && isValid(word)) {
             return input.contains(word) ? input.indexOf(word) : -1;
         }
         return -1;

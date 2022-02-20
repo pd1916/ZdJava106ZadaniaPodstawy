@@ -13,11 +13,11 @@ public class Task15 {
     }
 
     private static boolean areEqual(String[] firstArray, String[] secondArrayArray) {
-        if(firstArray.length != secondArrayArray.length) {
+        if (firstArray.length != secondArrayArray.length) {
             return false;
         }
-        for(int i = 0; i < firstArray.length; i++) {
-            if(!firstArray[i].equals(secondArrayArray[i])) {
+        for (int i = 0; i < firstArray.length; i++) {
+            if (!firstArray[i].equals(secondArrayArray[i])) {
                 return false; // pierwsza różnica, od razu kończymy pętle i metoda zwraca false
             }
         }
