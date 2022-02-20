@@ -10,8 +10,8 @@ public class Task8 {
     }
 
     private static void printResult(int[][] arrays) {
-        for(int[] a: arrays) {
-            for(int element : a) {
+        for (int[] a : arrays) {
+            for (int element : a) {
                 System.out.print(element + "\t");
             }
             System.out.println();
@@ -20,7 +20,7 @@ public class Task8 {
 
     private static int[][] fillData() {
         int[][] arrays = new int[ROW][COLUMN];
-        for(int i = 0; i < COLUMN; i++) {
+        for (int i = 0; i < COLUMN; i++) {
             arrays[0][i] = i + 1;
             arrays[1][i] = arrays[0][i] * arrays[0][i];
             arrays[2][i] = arrays[1][i] * arrays[0][i];

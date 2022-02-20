@@ -11,7 +11,7 @@ public class Task4 {
     }
 
     private static void drawWave() {
-        char [][] arrays = new char[WAVE_HEIGHT][WAVE_LENGTH];
+        char[][] arrays = new char[WAVE_HEIGHT][WAVE_LENGTH];
         fillMatrixWithSpaces(arrays);
         addStarsToMatrix(arrays);
         printMatrix(arrays);
@@ -22,14 +22,14 @@ public class Task4 {
         boolean isGoingDown = true;
         for (int i = 0; i < WAVE_LENGTH; i++) {
             arrays[counter][i] = STAR;
-            if (isGoingDown){
-                if (counter == WAVE_HEIGHT-1){
+            if (isGoingDown) {
+                if (counter == WAVE_HEIGHT - 1) {
                     isGoingDown = false;
                     continue;
                 }
                 counter++;
-            }else {
-                if (counter == 0){
+            } else {
+                if (counter == 0) {
                     isGoingDown = true;
                     continue;
                 }
@@ -39,16 +39,16 @@ public class Task4 {
     }
 
     private static void fillMatrixWithSpaces(char[][] arrays) {
-        for (int i = 0; i < WAVE_HEIGHT; i++){
-            for (int j = 0; j < WAVE_LENGTH; j++){
+        for (int i = 0; i < WAVE_HEIGHT; i++) {
+            for (int j = 0; j < WAVE_LENGTH; j++) {
                 arrays[i][j] = SPACE;
             }
         }
     }
 
     private static void printMatrix(char[][] arrays) {
-        for (int i = 0; i < WAVE_HEIGHT; i++){
-            for (int j = 0; j < WAVE_LENGTH; j++){
+        for (int i = 0; i < WAVE_HEIGHT; i++) {
+            for (int j = 0; j < WAVE_LENGTH; j++) {
                 System.out.print(arrays[i][j] + " ");
             }
             System.out.println();
