@@ -6,14 +6,22 @@ public class Task10 {
         int number = 123;
         int result = sumOfDigits(number);
         System.out.println("Sum: " + result);
+
+        number = 8;
+        result = sumOfDigits(number);
+        System.out.println("Sum: " + result);
     }
 
     private static int sumOfDigits(int number) {
         int sum = 0;
-        //123
-        while(number != 0) { // number = 123, number = 12
-            sum += number % 10; // sum = 0 + 3 , number % 10 => 123 % 10 = 3
-            number/= 10; // number / 10 => 123 / 10 = 12
+        if(number > 9) {
+            //123
+            while (number != 0) { // number = 123, number = 12
+                sum += number % 10; // sum = 0 + 3 , number % 10 => 123 % 10 = 3
+                number /= 10; // number / 10 => 123 / 10 = 12
+            }
+        } else {
+            sum = number;
         }
         return sum;
     }
