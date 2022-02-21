@@ -7,6 +7,7 @@ public class Task12 {
     private static final int VALUE_LOWER_A_IN_ASCII = 97;
     private static final int VALUE_LOWER_Z_IN_ASCII = 122;
     private static final int DIFF_A_AND_Z_LETTER = 26;
+    private static final int SPACE_SIGN = 32;
 
     public static void main(String[] args) {
         System.out.print("Please insert your text: ");
@@ -25,6 +26,10 @@ public class Task12 {
                 char c = (char) ((((input.charAt(i) - (VALUE_LOWER_A_IN_ASCII - shift)) % DIFF_A_AND_Z_LETTER) + VALUE_LOWER_A_IN_ASCII));
                 encryptedSb.append(c);
             }
+            // jeżeli chcielibyśmy zachowaj spacje pomiędzy wyrazami wtedy należy odkomonetować poniższą sekcję
+//             else if (input.charAt(i) == SPACE_SIGN){
+//                encryptedSb.append(input.charAt(i));
+//            }
         }
         return encryptedSb.toString();
     }
