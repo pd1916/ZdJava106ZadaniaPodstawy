@@ -22,7 +22,7 @@ Napisz program, który dla podanej liczby (jako String) mnoży jej cyfry tak dł
             20 → 2x0 = 0
 */
     public static void main(String[] args) {
-        String numberToReduce = "277777788888899";
+        String numberToReduce = "2077777788888899";
         int reducedValue = reduce(numberToReduce);
         System.out.println("Number to reduce: " + numberToReduce);
         System.out.println("After reduce: " + reducedValue);
@@ -35,11 +35,11 @@ Napisz program, który dla podanej liczby (jako String) mnoży jej cyfry tak dł
 
     public static int reduce(String number) {
         String[] split = number.split(""); // 'rozbicie' stringa na pojedyńcze znaki i pzypisanie do tablicy
-        int sum = 1;
+        int sum = 1; // początkowa wartość to 1, tak żeby przy mnożeniu przez pierwszą liczbę nie zmienić wyniku - coś * 1 zawsze da nam coś
         do {
             for (String element : split) {
                 int i = Integer.parseInt(element); // parsowanie stringa na int'a
-                if (i == 0) { // jeżeli pojawi się zero -> przerwij pętle i zwróć 0 -> każda liczba * 0 i tak na dam zero
+                if (i == 0) { // jeżeli pojawi się zero -> przerwij pętle i zwróć 0 -> każda liczba * 0 i tak da nam zero
                     return 0;
                 }
                 sum *= i;
