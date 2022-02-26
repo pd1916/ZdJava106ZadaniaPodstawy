@@ -1,7 +1,5 @@
 package pl.sdacademy.java.basic.exercises.day3.task7;
 
-import java.util.Objects;
-
 public class Cat {
     private String name;
 

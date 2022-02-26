@@ -14,30 +14,26 @@ public class Task6 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please insert date in format [" + INPUT_DATE_FORMAT + "]");
         String inputDate = scanner.nextLine();
-
-//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(INPUT_DATE_FORMAT);
-//        LocalDateTime nextLesson = LocalDateTime.parse(inputDate, formatter);
+/*        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(INPUT_DATE_FORMAT);
+        LocalDateTime nextLesson = LocalDateTime.parse(inputDate, formatter);*/
         LocalDateTime nextLesson = LocalDateTime.parse(inputDate, DATE_TIME_FORMATTER);
 
         LocalDateTime now = LocalDateTime.now();
-
         // punkt A
-//        long daysToNextLesson = Duration.between(now, nextLesson).toDays();
-//        System.out.println("You have " + daysToNextLesson + " days to the next lesson");
+/*        long daysToNextLesson = Duration.between(now, nextLesson).toDays();
+        System.out.println("You have " + daysToNextLesson + " days to the next lesson");*/
 
         //punkt B
         long millis = Duration.between(now, nextLesson).toMillis();
-        System.out.println("Milis: " + millis);
-
         long days = TimeUnit.MILLISECONDS.toDays(millis);
         long hours = TimeUnit.MILLISECONDS.toHours(millis) - TimeUnit.DAYS.toHours(TimeUnit.MILLISECONDS.toDays(millis));
         long mins = TimeUnit.MILLISECONDS.toMinutes(millis) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millis));
         long secs = TimeUnit.MILLISECONDS.toSeconds(millis) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis));
-
-        System.out.println("days: " + days);
-        System.out.println("hours: " + hours);
-        System.out.println("mins: " + mins);
-        System.out.println("secs: " + secs);
-
+        System.out.println("You have ");
+        System.out.println(days + " days and");
+        System.out.println(hours + " hours and");
+        System.out.println(mins + " minutes and");
+        System.out.println(secs + " seconds");
+        System.out.println("to the next lesson");
     }
 }

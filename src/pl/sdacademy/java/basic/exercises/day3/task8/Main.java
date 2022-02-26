@@ -15,6 +15,9 @@ public class Main {
 
         String surname = getSurnameWithBiggestOfStropheNumbers(poems);
         System.out.println(surname);
+
+        Author author = getAuthorWithBiggestOfStropheNumbers(poems);
+        System.out.println(author);
     }
 
     private static String getSurnameWithBiggestOfStropheNumbers(Poem[] poems) {
@@ -29,4 +32,18 @@ public class Main {
         }
         return surname;
     }
+
+    private static Author getAuthorWithBiggestOfStropheNumbers(Poem[] poems) {
+        int maxStropheNumbers = 0;
+        Author author = null;
+        for(Poem poem : poems) {
+            int currentStropheNumbers = poem.getStropheNumbers();
+            if(currentStropheNumbers > maxStropheNumbers) {
+                maxStropheNumbers = currentStropheNumbers;
+                author = poem.getCreator();
+            }
+        }
+        return author;
+    }
+
 }

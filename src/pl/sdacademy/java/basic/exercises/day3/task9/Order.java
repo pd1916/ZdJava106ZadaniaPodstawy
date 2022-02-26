@@ -3,7 +3,7 @@ package pl.sdacademy.java.basic.exercises.day3.task9;
 public class Order {
     private int maxOrderItem;
     private OrderItem[] orderItems;
-    private int currentOrderItems; // = 0
+    private int currentOrderItems; // lub private int currentOrderItems = 0 i wtedy nie musimy ustawiać 0 w konstruktorze
 
     public Order(int maxOrderItem) {
         this.currentOrderItems = 0;
@@ -25,12 +25,34 @@ public class Order {
         return true;
     }
 
-    //getTotalAmount
-    //for each po tablicy
-    // sum += getPrice
+    public double getTotalAmount() {
+        double totalAmount = 0;
+        for (OrderItem orderItem : orderItems) {
+            if(orderItem != null) {
+                totalAmount += orderItem.getAmount();
+            }
+        }
+        return totalAmount;
+    }
 
-    //getItemsCount
-    //for each po tablicy
-    // count += getQuantity
+    public int getItemsCount() {
+        int total = 0;
+        for(OrderItem orderItem : orderItems) {
+            if(orderItem != null) {
+                total += orderItem.getQuantity();
+            }
+        }
+        return total;
+    }
+
+    public void print() {
+        for (OrderItem orderItem : orderItems) {
+            if(orderItem != null) {
+                orderItem.print();
+            }
+        }
+        System.out.println("Total amount: " + getTotalAmount());
+        System.out.println("Count: " + getItemsCount());
+    }
 
 }

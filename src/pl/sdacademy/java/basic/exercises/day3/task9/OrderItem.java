@@ -12,7 +12,16 @@ public class OrderItem {
     }
 
     public double getAmount() {
-        return quantity * price;
+        return Math.round(quantity * price * 100.0) / 100.0; // zaookrąglenie do 2 miejsc po przecinku
+        //return Math.round(quantity * price);
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public int getQuantity() {
+        return quantity;
     }
 
     public boolean isCorrect() {
